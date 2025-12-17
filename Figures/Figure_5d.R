@@ -1,8 +1,8 @@
-
+## Source data of this plot is in supplementary files of the paper.
 
 library(ggplot2)
 library(ggrepel)
-Tumor_long_post_vs_pre_DEG <- read_csv("path/to/Figure 5d.csv")
+Tumor_long_post_vs_pre_DEG <- read_csv("path/to/Figure_5d.csv")
 colnames(Tumor_long_post_vs_pre_DEG)[1] <- "Gene"
 
 Gene_highlight <- c("UPK1B","WNK4","MIF","NT5E","H1-5","MYCN","THY1","IFITM1","IL32","KLK5","H3C2","TAGLN","CLDN1",
