@@ -1,4 +1,4 @@
-
+## Source data of this plot is in supplementary files of the paper.
 library(ggplot2)
 
 Bubble <- ggplot(fgseaRes_Tidy_1, aes(reorder(pathway, NES), NES, size=coverage, color=padj))+
