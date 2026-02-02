@@ -1,16 +1,16 @@
 ## Source data of this plot is in supplementary files of the paper.
-
+## DEGs of on-treatment vs. pre-treatment samples in all patients (tumor compartment)
 
 library(ggplot2)
 library(ggrepel)
 Tumor_long_post_vs_pre_DEG <- read_csv("path-to-folder/Figure S2a.csv")
 colnames(Tumor_long_post_vs_pre_DEG)[1] <- "Gene"
 
-Gene_highlight <- c("CDK18", 'CLIC3', 'HLA-C','IL32','IL4R', 'UQCR10','HLA-B','COX5B','HLA-A', 'HLA-F','FHL2',"CLDN1",
-                    "IDO1","TGM2","CLDN16",'SEMA3B',"TUBB4B","ATP1B1","MDK","WNT7A",
-                    "MUC5B",'FGFR3',"CCND1","IGFBP4","RHOB",'JUN',"BHLHE40","CEBPD","INHBA","IL6","JUNB","SOCS3",
+Gene_highlight <-  c("CDK18", 'CLIC3', 'HLA-C','IL32','UQCR10','HLA-B','COX5B',
+                    "TUBB4B","ATP1B1","MDK","WNT7A",
+                    "MUC5B",'FGFR3',"RHOB",'JUN',"BHLHE40","CEBPD","INHBA","IL6","JUNB","SOCS3",
                     "EGR2","SGK1","NR4A1","ZFP36","GADD45B","EGR1","DUSP1","FKBP5","CCN1","FOS","ATF3","SERPINE1",
-                    'APOD',"CXCL14","IGHG4","CCN2","IGHG2","IGKG","IGHG3")
+                    'APOD',"CXCL14","IGHG4","CCN2","IGHG2","IGKG","IGHG3") 
 
 Tumor_long_post_vs_pre_DEG$invert_P <- (-log10(Tumor_long_post_vs_pre_DEG$adj.P.Val)) 
 colnames(Tumor_long_post_vs_pre_DEG)[1] <- "Gene"
