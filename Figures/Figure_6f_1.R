@@ -1,12 +1,12 @@
 #### Source data of this plot is in supplementary files of the paper.
 
-
+## DEGs of on-treatment vs. pre-treatment samples in patients with long PFS (stromal compartment)
 library(ggplot2)
 library(ggrepel)
-Tumor_long_post_vs_pre_DEG <- read_csv("path-to-folder/Figure 5f.csv")
+Tumor_long_post_vs_pre_DEG <- read_csv("path-to-folder/Figure 6f.csv")
 colnames(Tumor_long_post_vs_pre_DEG)[1] <- "Gene"
 
-Gene_highlight <- c("CXCL12", 'HLA-C', 'HLA-B','LRRC15','CD14', 'SDC1','IGHA1','CD14','HLA-A', 'COL8A1','FAP',"NT5E",
+Gene_highlight <- c("PER1","TOMM20","CLU","CXCL12", 'HLA-C', 'HLA-B','LRRC15','CD14', 'SDC1','IGHA1','CD14','HLA-A', 'FAP',"NT5E",
                     "ACTA2","PDGFRB","THBS2",'C1QC',"POSTN","C1QB","SPP1","LUM",
                     "CD81",'IL6ST',"ATP9A","EGR3","CCND2",'JUND',"NDUFB9","MYC","KRT19","ATP1B1","TUBB2B","JUNB","MGP",
                     "ELF3","THSD4","FKBP5","ATF3","KRT18","EGR1","ESR1","KRT8","KLF4","DUSP1","NR4A1","FOS")
@@ -26,8 +26,6 @@ Tumor_long_post_vs_pre_DEG$Color <- factor(Tumor_long_post_vs_pre_DEG$Color, lev
                                                                                         "FDR < 0.1, neg","FDR < 0.05, neg","FDR < 0.01, neg","FDR < 0.001, neg"))
 
 ggplot(Tumor_long_post_vs_pre_DEG, aes(x = logFC, y = invert_P, color = Color,label = Gene)) +
-  #geom_vline(xintercept = c(1, -1), lty = "dashed") +
-  #geom_hline(yintercept = -log10(0.05), lty = "dashed") +
   geom_point(size=0.3) +
   labs(x = "Pre-treatment <- log2(FC) -> On-treatment",
        y = "-log10(p.adj)",
