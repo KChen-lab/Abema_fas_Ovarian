@@ -1,4 +1,5 @@
 ## Source data of this plot is in supplementary files of the paper.
+## GSEA of on-treatment vs. pre-treatment samples in patients with long PFS (stromal compartment)
 
 set.seed(2023)
 library(ggplot2)
