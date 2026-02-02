@@ -1,4 +1,6 @@
 ## Source data of this plot is in supplementary files of the paper.
+## GSEA of short vs. long PFS patient samples at pre-treatment timepoint (tumor compartment) using published metaprograms (Barkley et. al, Nat Genet 2020)
+
 library(ggplot2)
 
 Bubble <- ggplot(fgseaRes_Tidy_1, aes(reorder(pathway, NES), NES, size=coverage, color=padj))+
