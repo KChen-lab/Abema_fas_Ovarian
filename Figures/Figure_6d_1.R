@@ -6,10 +6,10 @@ library(ggrepel)
 Tumor_long_post_vs_pre_DEG <- read_csv("path/to/Figure_6d.csv")
 colnames(Tumor_long_post_vs_pre_DEG)[1] <- "Gene"
 
-Gene_highlight <- c("PER1","TOMM20","CLU","CXCL12", 'HLA-C', 'HLA-B','LRRC15','CD14', 'SDC1','IGHA1','CD14','HLA-A', 'FAP',"NT5E",
-                    "ACTA2","PDGFRB","THBS2",'C1QC',"POSTN","C1QB","SPP1","LUM",
-                    "CD81",'IL6ST',"ATP9A","EGR3","CCND2",'JUND',"NDUFB9","MYC","KRT19","ATP1B1","TUBB2B","JUNB","MGP",
-                    "ELF3","THSD4","FKBP5","ATF3","KRT18","EGR1","ESR1","KRT8","KLF4","DUSP1","NR4A1","FOS")
+Gene_highlight <- c("TOMM5","NXNL2","PER1","CEBPD","ZFP36","CCN1","UPK1B","WNK4","MIF","NT5E","H1-5","MYCN","IL32","H3C2",
+                    "UQCR10","TP53","WNT7A","CDK18","NDUFB6",
+                    "CDK1","PCNA","PKM","GREB1","ISG20","IGHG4","APOD","IGKC",
+                    "IGHG3","CXCL14","IGHG2","IL6","CCL4L2","MGP","NR4A1","FOS","DUSP1","JUNB","EGR1","ATF3")
 
 Tumor_long_post_vs_pre_DEG$invert_P <- (-log10(Tumor_long_post_vs_pre_DEG$adj.P.Val)) 
 colnames(Tumor_long_post_vs_pre_DEG)[1] <- "Gene"
