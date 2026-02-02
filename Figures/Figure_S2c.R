@@ -1,5 +1,7 @@
 
 ## Source data of this plot is in supplementary files of the paper.
+## DEGs of on-treatment vs. pre-treatment samples in all patients (stromal compartment)
+
 library(ggplot2)
 library(ggrepel)
 
